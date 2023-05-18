@@ -1,6 +1,7 @@
-export const sum = (a: number, b: number) => {
-  if ('development' === process.env.NODE_ENV) {
-    console.log('dev only output');
-  }
-  return a + b;
-};
+export * from './objectToCSSVars';
+export * from './injectTheme';
+export * from './themes';
+export * from './tokens';
+export * from './updateTheme';
+export * from './createTheme';
+export * from './vars';

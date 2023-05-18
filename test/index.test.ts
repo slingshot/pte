@@ -1,7 +1,6 @@
-import { sum } from '../src/index';
-
-describe('sum', () => {
-  it('adds two numbers together', () => {
-    expect(sum(1, 1)).toEqual(2);
+// TODO: add tests
+describe('fake test', () => {
+  it('fake-test', () => {
+    expect(1).toEqual(1);
   });
 });
