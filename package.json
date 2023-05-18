@@ -14,7 +14,7 @@
     "preinstall": "npx -y only-allow pnpm",
     "analyze": "size-limit --why",
     "build": "dts build",
-    "lint": "dts lint",
+    "lint": "eslint src/",
     "prepare": "dts build",
     "size": "size-limit",
     "start": "dts watch",
@@ -23,14 +23,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "dts lint"
+      "pre-commit": "eslint --fix src/"
     }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
   },
   "jest": {
     "testEnvironment": "node"
@@ -54,6 +48,7 @@
     "@ssh/eslint-config": "^1.0.0",
     "@tsconfig/recommended": "^1.0.2",
     "dts-cli": "^2.0.3",
+    "eslint": "^8.40.0",
     "husky": "^8.0.3",
     "size-limit": "^8.2.4",
     "tslib": "^2.5.1",
