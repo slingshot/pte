@@ -11,6 +11,7 @@
     "src"
   ],
   "scripts": {
+    "preinstall": "npx -y only-allow pnpm",
     "analyze": "size-limit --why",
     "build": "dts build",
     "lint": "dts lint",
@@ -33,7 +34,6 @@
   "jest": {
     "testEnvironment": "node"
   },
-  "peerDependencies": {},
   "engines": {
     "node": ">=12"
   },
@@ -46,5 +46,15 @@
       "path": "dist/pte.esm.js",
       "limit": "10 KB"
     }
-  ]
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^8.2.4",
+    "@ssh/eslint-config": "^1.0.0",
+    "@tsconfig/recommended": "^1.0.2",
+    "dts-cli": "^2.0.3",
+    "husky": "^8.0.3",
+    "size-limit": "^8.2.4",
+    "tslib": "^2.5.1",
+    "typescript": "^5.0.4"
+  }
 }
