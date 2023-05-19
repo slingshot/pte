@@ -5,3 +5,4 @@ export * from './tokens';
 export * from './updateTheme';
 export * from './createTheme';
 export * from './vars';
+export * from './generateCSS';

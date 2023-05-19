@@ -1,7 +1,7 @@
 import { objectToCSSVars } from './objectToCSSVars';
 import type { Theme } from './themes';
 
-export const updateTheme = <T extends Theme>(updatedValues: Partial<T>) => {
+export const updateTheme = <T = Theme>(updatedValues: Partial<T>) => {
     // Ensure `window` and `document` are defined.
     if (typeof window === 'undefined' || typeof document === 'undefined') {
         throw new Error("In order to run `updateTheme`, `window` and `document` must be defined. Make sure you're running this function in the browser.");

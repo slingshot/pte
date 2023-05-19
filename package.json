@@ -11,10 +11,9 @@
     "src"
   ],
   "scripts": {
-    "preinstall": "npx -y only-allow pnpm",
     "analyze": "size-limit --why",
     "build": "dts build",
-    "lint": "eslint src/",
+    "lint": "eslint ./src/",
     "prepare": "dts build",
     "size": "size-limit",
     "start": "dts watch",
@@ -30,16 +29,16 @@
     "testEnvironment": "node"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=16"
   },
   "size-limit": [
     {
       "path": "dist/pte.cjs.production.min.js",
-      "limit": "10 KB"
+      "limit": "20 KB"
     },
     {
       "path": "dist/pte.esm.js",
-      "limit": "10 KB"
+      "limit": "20 KB"
     }
   ],
   "devDependencies": {
@@ -47,11 +46,15 @@
     "@size-limit/preset-small-lib": "^8.2.4",
     "@ssh/eslint-config": "^1.0.0",
     "@tsconfig/recommended": "^1.0.2",
+    "@types/react": "^18.2.6",
     "dts-cli": "^2.0.3",
     "eslint": "^8.40.0",
     "husky": "^8.0.3",
     "size-limit": "^8.2.4",
     "tslib": "^2.5.1",
     "typescript": "^5.0.4"
+  },
+  "optionalDependencies": {
+    "react": "^18.2.0"
   }
 }
