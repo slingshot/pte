@@ -53,8 +53,5 @@
     "size-limit": "^8.2.4",
     "tslib": "^2.5.1",
     "typescript": "^5.0.4"
-  },
-  "optionalDependencies": {
-    "react": "^18.2.0"
   }
 }
