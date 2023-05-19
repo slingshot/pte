@@ -347,3 +347,21 @@ export function ThemeSwitcher() {
     );
 }
 ```
+
+# Maintenance
+
+`pte` uses [pnpm](https://pnpm.io/) for package management. To install dependencies, run:
+
+```bash
+pnpm install
+```
+
+Tests are coming soon; currently planned for the 1.0.0 release.
+
+We use [changesets](https://github.com/changesets/changesets) to manage releases. When contributing new changes, please run:
+
+```bash
+pnpm changeset
+```
+
+The CLI will ask you to enter brief descriptions of your changes and specify whether your changes are a patch, minor, or major (for semver). Once you've finished, commit the changeset files. The Changesets GitHub Actions automatically open a pull request with all current changeset files. When the PR is merged, the changesets will automatically be added to [CHANGELOG.md](./CHANGELOG.md), a new release tag will be created, and a new version will be published to npm.
