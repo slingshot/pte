@@ -1,8 +1,15 @@
 {
   "name": "pte",
   "description": "Universal theming utilities for any JavaScript or TypeScript environment",
-  "keywords": ["theming", "react", "server components", "rsc", "styling", "css"],
-  "version": "0.2.0",
+  "keywords": [
+    "theming",
+    "react",
+    "server components",
+    "rsc",
+    "styling",
+    "css"
+  ],
+  "version": "0.2.1",
   "license": "MIT",
   "author": "Sanil Chawla",
   "main": "dist/index.js",
