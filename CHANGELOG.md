@@ -1,5 +1,12 @@
 # pte
 
+## 0.4.6
+
+### Patch Changes
+
+- 0fb8c44: Remove package type and revert `tsconfig` to specify different `compilerOptions` for ts-node
+- 01b9997: Remove dependency for recommended tsconfig, inline instead
+
 ## 0.4.4
 
 ### Patch Changes
