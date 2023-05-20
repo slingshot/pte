@@ -22,7 +22,8 @@
   },
   "files": [
     "dist",
-    "src"
+    "src",
+    "tsconfig.json"
   ],
   "bin": {
     "pte": "./src/cli.ts"
