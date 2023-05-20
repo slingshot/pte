@@ -1,5 +1,11 @@
 # pte
 
+## 0.4.4
+
+### Patch Changes
+
+- 229ac5e: Include `tsconfig` in NPM package so CLI works
+
 ## 0.4.3
 
 ### Patch Changes
