@@ -1,5 +1,11 @@
 # pte
 
+## 0.4.0
+
+### Minor Changes
+
+- dbf6dbb: Add CLI for generating static CSS files from a theme file
+
 ## 0.3.0
 
 ### Minor Changes
