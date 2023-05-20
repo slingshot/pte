@@ -1,5 +1,11 @@
 # pte
 
+## 0.4.2
+
+### Patch Changes
+
+- 688e60e: Set package type to `module` and update `tsconfig` for ts-node to integrate that update
+
 ## 0.4.1
 
 ### Patch Changes
