@@ -28,7 +28,7 @@
   },
   "scripts": {
     "analyze": "size-limit --why",
-    "build": "dts build && dts build --entry ./src/cli.ts",
+    "build": "dts build",
     "lint": "eslint ./src/",
     "prepare": "dts build",
     "size": "size-limit",

@@ -1,16 +1,18 @@
 {
   "extends": "@tsconfig/recommended/tsconfig.json",
   "include": ["src", "types"],
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "commonjs",
-    "jsx": "react",
-    "strict": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node"
-  },
   "ts-node": {
     "esm": true,
-    "experimentalSpecifierResolution": "node"
+    "experimentalSpecifierResolution": "node",
+    "compilerOptions": {
+      "target": "esnext",
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+    }
+  },
+  "compilerOptions": {
+    "module": "esnext",
+    "strict": true
   }
 }
