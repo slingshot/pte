@@ -81,6 +81,7 @@ export const pget = <T = Theme>(path: NestedPaths<T>, options?: {
     return window.getComputedStyle(selectorEl).getPropertyValue(
         pvar(path, {
             prefix: options?.prefix,
+            raw: true,
         }),
     );
 };
