@@ -9,7 +9,7 @@
     "styling",
     "css"
   ],
-  "version": "0.4.4",
+  "version": "0.4.5",
   "license": "MIT",
   "author": "Sanil Chawla",
   "type": "module",
@@ -63,7 +63,6 @@
     "@changesets/cli": "^2.26.1",
     "@size-limit/preset-small-lib": "^8.2.4",
     "@ssh/eslint-config": "^1.0.0",
-    "@tsconfig/recommended": "^1.0.2",
     "@types/node": "^18.16.13",
     "@types/react": "^18.2.6",
     "@types/yargs": "^17.0.24",
