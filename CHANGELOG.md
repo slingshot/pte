@@ -1,5 +1,11 @@
 # pte
 
+## 0.4.3
+
+### Patch Changes
+
+- fb58e8e: Add `--esm` flag to use ESM loader for ts-node in CLI
+
 ## 0.4.2
 
 ### Patch Changes
