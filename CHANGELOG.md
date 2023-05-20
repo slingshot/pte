@@ -1,5 +1,17 @@
 # pte
 
+## 0.3.0
+
+### Minor Changes
+
+- 53554de: Make options optional for `pget`/`pvar`
+- 46da627: Fix `pget` usage of `pvar` (requires `raw` mode)
+
+### Patch Changes
+
+- a42270b: Custom commit message in publish action
+- 4776189: Add maintenance documentation to `README`
+
 ## 0.2.1
 
 ### Patch Changes
