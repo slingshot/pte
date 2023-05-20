@@ -1,5 +1,11 @@
 # pte
 
+## 0.4.1
+
+### Patch Changes
+
+- 5109ef4: CLI: Use `ts-node` directly instead of via `npx`
+
 ## 0.4.0
 
 ### Minor Changes
