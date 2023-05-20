@@ -1,4 +1,4 @@
-#!/usr/bin/env ts-node
+#!/usr/bin/env ts-node --esm
 
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
