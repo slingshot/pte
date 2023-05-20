@@ -4,15 +4,11 @@
   "ts-node": {
     "esm": true,
     "experimentalSpecifierResolution": "node",
-    "compilerOptions": {
-      "target": "esnext",
-      "module": "commonjs",
-      "esModuleInterop": true,
-      "moduleResolution": "node",
-    }
   },
   "compilerOptions": {
     "module": "esnext",
-    "strict": true
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node"
   }
 }
