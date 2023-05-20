@@ -12,7 +12,6 @@
   "version": "0.4.5",
   "license": "MIT",
   "author": "Sanil Chawla",
-  "type": "module",
   "main": "dist/index.js",
   "module": "dist/pte.esm.js",
   "typings": "dist/index.d.ts",

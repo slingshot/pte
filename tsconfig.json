@@ -1,16 +1,22 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "include": ["src", "types"],
-  "ts-node": {
-    "esm": true,
-    "experimentalSpecifierResolution": "node",
-  },
-  "compilerOptions": {
-    "module": "esnext",
-    "strict": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
-  }
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "include": ["src", "types"],
+    "ts-node": {
+        "compilerOptions": {
+            "target": "esnext",
+            "module": "commonjs",
+            "lib": ["esnext"],
+            "esModuleInterop": true
+        },
+        "esm": true,
+        "experimentalSpecifierResolution": "node"
+    },
+    "compilerOptions": {
+        "module": "esnext",
+        "strict": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true
+    }
 }
