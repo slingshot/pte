@@ -39,10 +39,29 @@ const run = yargs(hideBin(process.argv))
             const {
                 selector, output, theme: themeArg, namedExport,
             } = args;
-            const theme = (await import(`${process.cwd()}/${themeArg.replace('./', '')}`))[namedExport || 'default'];
+
+            // Try to import the theme file
+            let themeFile: any;
+            try {
+                themeFile = await import(`${process.cwd()}/${themeArg.replace('./', '')}`);
+            } catch (e) {
+                console.error(`❌  Failed to import theme from "${themeArg}". Make sure you're using a relative path from your current working directory.`);
+                process.exit(1);
+            }
+
+            // Make sure the theme file exists and has the named export
+            if (!themeFile || !themeFile[namedExport || 'default']) {
+                console.error(`❌  Failed to find named export "${namedExport || 'default'}" in "${themeArg}". Make sure you're either exporting the theme object as default, or passing the correct named export after the filename.`);
+                process.exit(1);
+            }
+
+            // Export the theme
+            const theme = themeFile[namedExport || 'default'];
             await exportCSS(theme, output, selector);
-            console.log(`✅  Exported theme to ${output} in ${Date.now() - start}ms`);
-            process.exit(1);
+
+            // Print success message and exit
+            console.log(`✅  Exported theme to "${output}" in ${Date.now() - start}ms`);
+            process.exit(0);
         },
     )
     .wrap(100)
