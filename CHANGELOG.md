@@ -1,5 +1,11 @@
 # pte
 
+## 0.4.7
+
+### Patch Changes
+
+- e32086b: CLI: improve error messages
+
 ## 0.4.6
 
 ### Patch Changes
