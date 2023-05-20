@@ -81,8 +81,17 @@ export default function RootLayout({ children }) {
 };
 ```
 
+You can use the built-in CLI to export static CSS files for your theme, which is especially helpful for getting IntelliSense to recognize your theme variables (but can also be used for static theme generation):
+
+```bash
+# Run `pte export --help` for more info
+# This will read a named export called `MyTheme` from `./src/my-theme.ts` and output a file called `pte.css` in the `./public` directory
+pte export ./src/my-theme.ts MyTheme -o ./src/styles/pte.css
+```
+<br/>
+
 <details>
-<summary>Alternative 1: Static injection script</summary>
+<summary><strong>Alternative 1:</strong> Static injection script</summary>
 
 You can also create a `<script>` component that injects
 the theme into the DOM _before_ your app is rendered. The `generateThemeInjection` function outputs a plain-text
@@ -117,7 +126,7 @@ export default function RootLayout({ children }) {
 </details>
 
 <details>
-<summary>Alternative 2: Client-side injection</summary>
+<summary><strong>Alternative 2:</strong> Client-side injection</summary>
 
 Alternatively, you can invoke the `injectTheme` function directly on the client. This is useful if you're using a framework that doesn't utilize server-side rendering, or if you need to dynamically change the initial theme based on something on the client.
 

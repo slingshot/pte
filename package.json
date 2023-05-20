@@ -23,9 +23,12 @@
     "dist",
     "src"
   ],
+  "bin": {
+    "pte": "./src/cli.ts"
+  },
   "scripts": {
     "analyze": "size-limit --why",
-    "build": "dts build",
+    "build": "dts build && dts build --entry ./src/cli.ts",
     "lint": "eslint ./src/",
     "prepare": "dts build",
     "size": "size-limit",
@@ -65,6 +68,8 @@
     "husky": "^8.0.3",
     "size-limit": "^8.2.4",
     "tslib": "^2.5.1",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "yargonaut": "^1.1.4",
+    "yargs": "^17.7.2"
   }
 }
