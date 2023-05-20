@@ -21,7 +21,7 @@ export type NestedPaths<T, D extends string = '.'> = T extends Record<string, an
  * pvar('colors.backgroundPrimary', 'foo') // '--foo-colors-backgroundPrimary'
  * ```
  */
-export const pvar = <T = Theme>(path: NestedPaths<T>, options: {
+export const pvar = <T = Theme>(path: NestedPaths<T>, options?: {
     /**
      * The prefix to use for the CSS variables.
      * @default 'pte'
@@ -47,12 +47,12 @@ export const pvar = <T = Theme>(path: NestedPaths<T>, options: {
  * pget('colors.backgroundPrimary') // '#ffffff'
  * ```
  */
-export const pget = <T = Theme>(path: NestedPaths<T>, options: {
+export const pget = <T = Theme>(path: NestedPaths<T>, options?: {
     /**
      * The prefix to use for the CSS variables.
      * @default 'pte'
      */
-    prefix: string,
+    prefix?: string,
     /**
      * The selector to use for the CSS variables.
      * @default 'body'
