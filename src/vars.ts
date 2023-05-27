@@ -3,13 +3,11 @@ import type { Theme } from './themes';
 /**
  * Helper type to get the nested paths of a type.
  */
-export type NestedPaths<T, D extends string = '.'> = T extends Record<string, any>
-    ? {
-        [K in keyof T]-?: T[K] extends Record<string, any>
-            ? `${K & string}${D}${NestedPaths<T[K], D>}`
-            : `${K & string}`;
-    }[keyof T]
-    : '';
+export type NestedPaths<ObjectType extends Record<string, any>> =
+    { [Key in keyof ObjectType & (string | number)]: ObjectType[Key] extends object
+        ? `${Key}` | `${Key}.${NestedPaths<ObjectType[Key]>}`
+        : `${Key}`
+    }[keyof ObjectType & (string | number)];
 
 /**
  * Get the CSS property name for a {@link Theme} attribute.
@@ -21,7 +19,7 @@ export type NestedPaths<T, D extends string = '.'> = T extends Record<string, an
  * pvar('colors.backgroundPrimary', 'foo') // '--foo-colors-backgroundPrimary'
  * ```
  */
-export const pvar = <T = Theme>(path: NestedPaths<T>, options?: {
+export const pvar = <T extends Record<string, any> = Theme>(path: NestedPaths<T>, options?: {
     /**
      * The prefix to use for the CSS variables.
      * @default 'pte'
@@ -47,7 +45,7 @@ export const pvar = <T = Theme>(path: NestedPaths<T>, options?: {
  * pget('colors.backgroundPrimary') // '#ffffff'
  * ```
  */
-export const pget = <T = Theme>(path: NestedPaths<T>, options?: {
+export const pget = <T extends Record<string, any> = Theme>(path: NestedPaths<T>, options?: {
     /**
      * The prefix to use for the CSS variables.
      * @default 'pte'
