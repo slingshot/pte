@@ -15,8 +15,8 @@ export type NestedPaths<ObjectType extends Record<string, any>> =
  * @param options - Options for the function.
  * @returns The CSS property name.
  * @example ```javascript
- * pvar('colors.backgroundPrimary') // '--pte-colors-backgroundPrimary'
- * pvar('colors.backgroundPrimary', 'foo') // '--foo-colors-backgroundPrimary'
+ * pvar('colors.backgroundPrimary') // 'var(--pte-colors-backgroundPrimary)'
+ * pvar('colors.backgroundPrimary', { prefix: 'foo', raw: true }) // '--foo-colors-backgroundPrimary'
  * ```
  */
 export const pvar = <T extends Record<string, any> = Theme>(path: NestedPaths<T>, options?: {
