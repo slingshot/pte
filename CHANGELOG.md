@@ -1,5 +1,11 @@
 # pte
 
+## 0.4.9
+
+### Patch Changes
+
+- f7e7bb9: Fixed `NestedPaths` type that's used for path completion in `pget` and `pvar`
+
 ## 0.4.8
 
 ### Patch Changes
