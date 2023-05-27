@@ -1,5 +1,12 @@
 # pte
 
+## 0.4.8
+
+### Patch Changes
+
+- b8fd07b: Improved `NestedPaths` type reliability
+- 3ebaea8: Add typed `generateCSS` export from `createTheme`
+
 ## 0.4.7
 
 ### Patch Changes
