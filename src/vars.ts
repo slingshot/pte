@@ -3,11 +3,11 @@ import type { Theme } from './themes';
 /**
  * Helper type to get the nested paths of a type.
  */
-export type NestedPaths<ObjectType extends Record<string, any>> =
-    { [Key in keyof ObjectType & (string | number)]: ObjectType[Key] extends object
-        ? `${Key}` | `${Key}.${NestedPaths<ObjectType[Key]>}`
-        : `${Key}`
-    }[keyof ObjectType & (string | number)];
+export type NestedPaths<T extends Record<string, any>> =
+    { [K in keyof T & (string | number)]: T[K] extends (string | number)
+        ? `${K}`
+        : `${K}.${NestedPaths<T[K]>}`
+    }[keyof T & (string | number)];
 
 /**
  * Get the CSS property name for a {@link Theme} attribute.
