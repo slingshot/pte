@@ -9,7 +9,7 @@
     "styling",
     "css"
   ],
-  "version": "0.4.9",
+  "version": "0.5.0",
   "license": "MIT",
   "author": "Sanil Chawla",
   "main": "dist/index.js",

@@ -1,5 +1,11 @@
 # pte
 
+## 0.5.0
+
+### Minor Changes
+
+- 717e8ad: CLI: new build process
+
 ## 0.4.9
 
 ### Patch Changes
